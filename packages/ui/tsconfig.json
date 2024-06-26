@@ -1,0 +1,27 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "sourceMap": true,
+    "isolatedModules": false,
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
+    "declarationDir": "@types",
+    "outDir": "dist",
+    "declaration": true,
+    "noImplicitAny": false,
+    "listEmittedFiles": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ui/*": ["src/*"]
+    },
+  },
+  "include": [
+    "src/**/*",
+    "@types",
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}

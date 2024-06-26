@@ -1,0 +1,57 @@
+{
+  "name": "managers",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "resolutions": {
+    "@types/react": "18.0.9",
+    "@swc/helpers": "0.4.36"
+  },
+  "scripts": {
+    "managers": "yarn workspace @leejangheon/managers",
+    "managers:build": "yarn workspace @leejangheon/managers build",
+    "utils": "yarn workspace @leejangheon/utils",
+    "ui": "yarn workspace @leejangheon/ui",
+    "storybook": "yarn workspace @leejangheon/ui storybook",
+    "precommit": "lint-staged",
+    "postinstall": "husky install",
+    "lint": "eslint --fix ./packages/**/*.{ts,tsx} --ext .ts,.tsx,.js,.jsx --cache",
+    "test:all": "yarn workspaces foreach --parallel --include @leejangheon/ui --include @leejangheon/utils --include @leejangheon/managers run test"
+  },
+  "devDependencies": {
+    "@babel/core": "7.23.0",
+    "@emotion/eslint-plugin": "11.7.0",
+    "@types/babel__core": "7",
+    "@vsm/vsm": "1.1.2",
+    "@tmap-web-lib/tmap-app-interface": "^1.10.0-beta.5",
+    "@types/node": "20.7.1",
+    "@types/prop-types": "15",
+    "@typescript-eslint/eslint-plugin": "5.25.0",
+    "@typescript-eslint/parser": "5.25.0",
+    "eslint": "8.15.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-typescript": "17.0.0",
+    "eslint-config-next": "12.1.6",
+    "eslint-import-resolver-webpack": "0.13.2",
+    "eslint-plugin-airbnb": "0.0.1-security",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jest": "27.1.6",
+    "eslint-plugin-jest-dom": "4.0.3",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-react": "7.30.0",
+    "eslint-plugin-simple-import-sort": "7.0.0",
+    "eslint-plugin-storybook": "0.5.12",
+    "eslint-plugin-testing-library": "5.9.1",
+    "husky": "8.0.3",
+    "lint-staged": "13.1.2",
+    "typescript": "4.7.4"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.17.8",
+    "prop-types": "15.8.1"
+  },
+  "packageManager": "yarn@3.6.3"
+}

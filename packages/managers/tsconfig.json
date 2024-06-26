@@ -1,0 +1,46 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@ui/*": [
+        "../../packages/ui/src/*"
+      ],
+      "@utils/*": [
+        "../../packages/utils/src/*"
+      ],
+      "@leejangheon/ui/*": [
+        "../../packages/ui/src/*"
+      ],
+      "@leejangheon/utils/*": [
+        "../../packages/utils/src/*"
+      ],
+    }
+  },
+  // "files": [
+  //   "custom.d.ts"
+  // ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "next.config.js",
+    "./jest.setup.ts"
+  ],
+  "exclude": [
+    "node_modules/**"
+  ]
+}
